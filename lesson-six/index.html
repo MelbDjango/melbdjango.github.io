@@ -4,15 +4,10 @@
     <head>
         <meta charset="utf-8">
         <title>Reveal.js</title>
-        <link rel="stylesheet" href="/css/reveal.css">
-        <link rel="stylesheet" href="/theme/melbdjango.css" id="theme">
+        <link rel="stylesheet" href="/lesson-six/css/reveal.css">
+        <link rel="stylesheet" href="/lesson-six/theme/melbdjango.css" id="theme">
         <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="/lib/css/zenburn.css">
-
-        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
-        <script>
-          document.write( '<link rel="stylesheet" href="/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-        </script>
+        <link rel="stylesheet" href="/lesson-six/lib/css/zenburn.css">
     </head>
     <body>
 
@@ -170,8 +165,8 @@ class ViewTest(TestCase):
 </script></section></div>
         </div>
 
-        <script src="/lib/js/head.min.js"></script>
-        <script src="/js/reveal.js"></script>
+        <script src="/lesson-six/lib/js/head.min.js"></script>
+        <script src="/lesson-six/js/reveal.js"></script>
 
         <script>
             function extend() {
@@ -189,12 +184,12 @@ class ViewTest(TestCase):
 
             // Optional libraries used to extend on reveal.js
             var deps = [
-              { src: '/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-              { src: '/plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: '/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: '/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-              { src: '/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-              { src: '/plugin/math/math.js', async: true }
+              { src: '/lesson-six/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: '/lesson-six/plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: '/lesson-six/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: '/lesson-six/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: '/lesson-six/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+              { src: '/lesson-six/plugin/math/math.js', async: true }
             ];
 
             // default options to init reveal.js
