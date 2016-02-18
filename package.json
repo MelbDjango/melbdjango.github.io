@@ -1,0 +1,40 @@
+{
+  "name": "melbdjango.github.io",
+  "version": "0.0.1",
+  "description": "Static page for Melb Django, to be hosted on gh-pages",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "build:css": "node-sass --watch --source-map true ./styles/styles.scss ./dist/styles.css",
+    "serve": "browser-sync start --server --files \"*.html\" --files \"dist/*\"",
+    "dev": "parallelshell \"npm run watch:css\" \"npm run serve\"",
+    "start": "npm run build:css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelbDjango/melbdjango.github.io.git"
+  },
+  "keywords": [
+    "django",
+    "commoncode",
+    "common-code"
+  ],
+  "author": "Darren Frenkel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MelbDjango/melbdjango.github.io/issues"
+  },
+  "homepage": "https://github.com/MelbDjango/melbdjango.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "browser-sync": "^2.11.1",
+    "cssmin": "^0.4.3",
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.8.1",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.5.1"
+  }
+}
