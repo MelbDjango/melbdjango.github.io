@@ -1,0 +1,24 @@
+.section  {
+    overflow: auto;
+    margin-bottom: $base-spacing-unit * 2;
+}
+
+.section--dark {
+    @extend .section;
+    background-color: $pine-green;
+    // color: $white;
+
+}
+
+.section--mid {
+    @extend .section;
+    background-color: $dark-sea-green;
+    // color: $white;
+
+}
+
+.section--light {
+    @extend .section;
+    background-color: $greenish-teal;
+    // color: $white;
+}

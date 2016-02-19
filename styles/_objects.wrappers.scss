@@ -1,0 +1,10 @@
+.container {
+    outline: 1px solid red;
+    margin: 0 $base-spacing-unit * 2;
+
+
+    @media (min-width: 960px) {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
