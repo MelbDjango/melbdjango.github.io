@@ -7,10 +7,26 @@
     "doc": "doc"
   },
   "scripts": {
-    "build:css": "node-sass --watch --source-map true ./styles/styles.scss ./dist/styles.css",
+    "forever": "node_modules/.bin/forever",
+    "postcss": "node_modules/.bin/postcss",
+    "watch": "node_modules/.bin/watch",
+
+    "build": "node-sass --source-map true styles/styles.scss .tmp/styles-raw.css & npm run autoprefixer -s",
+    "autoprefixer": "postcss --use autoprefixer -o .tmp/styles-prefixed.css .tmp/styles-raw.css -m .tmp/styles-raw.css.map & npm run cleancss -s",
+    "cleancss": "cleancss --source-map -o dist/styles.min.css .tmp/styles-prefixed.css",
+
+    "forever": "forever start -w --watchDirectory styles -c \"npm run build\" ./styles",
+    "onchange": "onchange 'styles/**/*' -- npm run build",
+    "watch": "watch \"npm run build\" styles",
+
     "serve": "browser-sync start --server --files \"*.html\" --files \"dist/*\"",
-    "dev": "parallelshell \"npm run watch:css\" \"npm run serve\"",
-    "start": "npm run build:css",
+
+    "dev:forevever": "parallelshell \"npm run forever\" \"npm run serve\"",
+    "dev:nodemon": "nodemon --watch styles --exec \"npm run build\"",
+    "dev:watch": "parallelshell \"npm run watch\" \"npm run serve\" -s",
+    "dev:onchange": "npm run onchange & npm run serve",
+
+    "start": "npm run dev:onchange",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,10 +47,12 @@
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "browser-sync": "^2.11.1",
-    "cssmin": "^0.4.3",
+    "clean-css": "^3.4.9",
     "node-sass": "^3.4.2",
-    "nodemon": "^1.8.1",
+    "nodemon": "^1.3.1",
+    "onchange": "^2.0.0",
     "parallelshell": "^2.0.0",
-    "postcss-cli": "^2.5.1"
+    "postcss-cli": "^2.5.1",
+    "watch": "^0.17.1"
   }
 }

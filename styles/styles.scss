@@ -1,25 +1,25 @@
 // Generic
-@import "vendor/_normalize";
-@import "vendor/_html5boilerplate";
+@import "vendor/normalize";
+@import "vendor/html5boilerplate";
 
 // Settings
-@import "_settings.colour.scss";
-@import "_settings.layout.scss";
+@import "settings.colour";
+@import "settings.layout";
 
 // Base
-@import "_base.generic.scss";
-@import "_base.links.scss";
-@import "_base.page.scss";
-@import "_base.typography.scss";
+@import "base.generic";
+@import "base.links";
+@import "base.page";
+@import "base.typography";
 
 // Objects
-@import "_objects.wrappers.scss";
-@import "_objects.section.scss";
+@import "objects.wrappers";
+@import "objects.section";
 
 // Components
-@import "_components.footer.scss";
+@import "components.footer";
 
 // Trumps
-@import "_utility.margins";
-@import "vendor/_html5boilerplate.print";
-@import "vendor/_html5boilerplate.helpers";
+@import "utility.margins";
+@import "vendor/html5boilerplate.print";
+@import "vendor/html5boilerplate.helpers";
