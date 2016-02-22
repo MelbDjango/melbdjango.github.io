@@ -2,6 +2,7 @@
 
 // set all heading sizes to an unstyled neutral to completely separate style and semantics
 h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 $base-spacing-unit;
     font-size: $font-size-base;
     font-weight: $font-weight-base;
 }
