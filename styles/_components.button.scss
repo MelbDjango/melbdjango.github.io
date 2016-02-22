@@ -1,0 +1,24 @@
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: $base-spacing-unit 0;
+    padding: $base-spacing-unit / 2 $base-spacing-unit * 2;
+    text-decoration: none;
+    border-radius: $border-radius-base;
+    box-shadow: 2px 2px 2px 0 rgba(12, 75, 51, 0.2);
+
+    &:hover {
+        top: 1px;
+    }
+
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+.button--default {
+    @extend .button;
+    background-color: $ice;
+    color: $dark-sea-green;
+}
