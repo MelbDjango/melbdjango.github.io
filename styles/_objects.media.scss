@@ -1,0 +1,15 @@
+.media {
+    display: flex;
+}
+
+.media__figure {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: $base-spacing-unit / 2;
+}
+
+.media__body {
+
+}

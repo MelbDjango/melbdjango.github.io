@@ -1,5 +1,5 @@
 
-.button {
+%button {
     position: relative;
     display: inline-block;
     margin: $base-spacing-unit 0;
@@ -18,7 +18,7 @@
 }
 
 .button--default {
-    @extend .button;
+    @extend %button;
     background-color: $ice;
     color: $dark-sea-green;
 }
