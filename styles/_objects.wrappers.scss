@@ -12,8 +12,7 @@
     margin: 0 $default-margin;
     max-width: $narrow-width;
 
-    @media (min-width: $narrow-width + $default-margin) {
-        // TODO: glitch here
+    @media (min-width: $narrow-width + $default-margin * 2) {
         margin: 0 auto;
     }
 
@@ -25,7 +24,7 @@
 .container--narrow {
     margin: 0 $default-margin;
 
-    @media (min-width: $narrow-width + $default-margin) {
+    @media (min-width: $narrow-width + $default-margin * 2) {
         margin: 0 auto;
         max-width: $narrow-width;
     }
