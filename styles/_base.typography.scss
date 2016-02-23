@@ -45,10 +45,12 @@ p {
 a {
     color: $white;
     text-decoration: underline;
+    text-shadow: 2px 2px 2px rgba(12, 75, 51, 0.2);
 
-    // to be supplied
     &:link {}
-    &:visited {}
+    &:visited {
+        color: $light-sage;
+    }
     &:hover {}
     &:focus {}
     &:active {}
