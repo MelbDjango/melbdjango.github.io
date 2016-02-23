@@ -1,5 +1,5 @@
 
-# Melb Django
+# MelbDjango
 
 If you're speaking at an upcoming event, you're invited to fork this repo, add your details into index.html, and submit a pull request so we can merge in your changes and publish details of your talk.
 
@@ -16,9 +16,10 @@ Don't worry, we'll review before merging, so there's no need to worry about brea
 <!-- speaking article ends -->
 ```
 
+
 ## Developing Locally
 
-If you need to change any styles, you can do run the site locally to compile the scss and serve the files.
+If you need to change any styles, you can do run the site locally to compile the scss and serve the files. Make sure you have the latest version of [nodejs](https://nodejs.org/en/) installed.
 
 ```
   npm install
@@ -26,9 +27,8 @@ If you need to change any styles, you can do run the site locally to compile the
 ```
 
 This will:
-
-- watch files in the styles/ directory for changes, 
-- compile styles.scss to a .tmp/ directory
-- run autoprefixer over the compiled temp files
-- pass the prefixed file through clean-css, resuting in dist/styles.min.css
-- serve the files using browser-sync, and refresh on changes
+  - Watch files in the `styles/` directory for changes
+  - Compile `styles.scss` to a `.tmp/` directory
+  - Run `autoprefixer` over the compiled temp files
+  - Pass the prefixed file through clean-css, resulting in `dist/styles.min.css`
+  - Serve the files using `browser-sync`, and refresh on changes
