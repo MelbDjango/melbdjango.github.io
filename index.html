@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="dist/styles.min.css">
     </head>
+
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -350,7 +351,6 @@
 
                 // http://stackoverflow.com/questions/28364649/access-json-data-from-external-javascript
                 function addScript(src) {
-                    console.log(src);
                     var s = document.createElement( 'script' );
                     s.setAttribute( 'src', src );
                     document.body.appendChild( s );
@@ -365,6 +365,8 @@
 
                 document.addEventListener("DOMContentLoaded", function() {
                     addScript(meetupApi);
+                    document.documentElement.classList.remove('no-js');
+                    document.documentElement.classList.add('js');
                 });
             })();
         </script>
