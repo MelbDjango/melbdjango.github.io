@@ -3,8 +3,8 @@
     margin: 0 $base-spacing-unit * 2;
 
 
-    @media (min-width: 960px) {
-        max-width: 960px;
+    @media (min-width: $break-lg) {
+        max-width: $desktop-width;
         margin: 0 auto;
     }
 }
