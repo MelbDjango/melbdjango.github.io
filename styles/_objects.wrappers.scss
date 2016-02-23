@@ -3,18 +3,22 @@
     margin: 0 $default-margin;
 
     @media (min-width: $break-lg) {
-        max-width: $desktop-width;
         margin: 0 auto;
+        max-width: $desktop-width;
     }
 }
 
 .container--medium {
-    margin: 0 auto;
+    margin: 0 $default-margin;
     max-width: $narrow-width;
+
+    @media (min-width: $narrow-width + $default-margin) {
+        // TODO: glitch here
+        margin: 0 auto;
+    }
 
     @media (min-width: $break-md) {
         max-width: $medium-width;
-        margin: 0 auto;
     }
 }
 
