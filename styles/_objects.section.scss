@@ -1,3 +1,4 @@
+
 .section  {
     overflow: auto;
     padding: $base-spacing-unit * 2 0;
@@ -6,19 +7,14 @@
 .section--dark {
     @extend .section;
     background-color: $pine-green;
-    // color: $white;
-
 }
 
 .section--mid {
     @extend .section;
-    background-color: $dark-sea-green;
-    // color: $white;
-
+    background-color: $greenish-teal-dark;
 }
 
 .section--light {
     @extend .section;
     background-color: $greenish-teal;
-    // color: $white;
 }
