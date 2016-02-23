@@ -14,7 +14,7 @@
 
     &:link {}
     &:visited {
-        color: inherit;
+        color: $text-primary;
     }
     &:hover {
         top: 1px;
@@ -31,4 +31,8 @@
     @extend %button;
     background-color: $ice;
     color: $dark-sea-green;
+
+    &:visited {
+        color: $dark-sea-green;
+    }
 }
