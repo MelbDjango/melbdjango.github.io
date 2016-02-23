@@ -47,8 +47,8 @@
                             <article id="meetup-details" class="Grid-cell">
                                 <time>Thursday September 11th 6:00pm</time>
 
-                                <p><span>136</span> people have said they’re going.</p>
-                                <p><a href="" class="button--default">View on Meetup</a></p>
+                                <p><span id="js-rsvpCount">Several</span> people have said they’re going.</p>
+                                <p><a href="http://www.meetup.com/MelbDjango/events/228887132/" class="button--default">View on Meetup.com</a></p>
 
                                 <p>Hosted by Common Code</p>
 
@@ -192,6 +192,7 @@
                                     </div>
                                 </footer>
                             </article>
+
                         </div>
                     </div>
                 </div>
@@ -331,5 +332,42 @@
             // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             // ga('create',' UA-42389796-1','auto');ga('send','pageview');
         </script>
+
+        <script>
+            (function () {
+                'use strict';
+
+                // change this each event to get the appropriate RSVPs
+                var eventId = 228887132;
+                // private?! heh
+                var APIkey = '483872641e1455725fd4c6d7d674461';
+                var meetupApi = [
+                    'https://api.meetup.com/2/rsvps',
+                    '?callback=apiCallback',
+                    '&key=' + APIkey,
+                    '&event_id=' + eventId
+                ].join('');
+
+                // http://stackoverflow.com/questions/28364649/access-json-data-from-external-javascript
+                function addScript(src) {
+                    console.log(src);
+                    var s = document.createElement( 'script' );
+                    s.setAttribute( 'src', src );
+                    document.body.appendChild( s );
+                }
+
+                // Callback for loading api data:
+                window.apiCallback = function(data) {
+                    // console.info(data);
+                    var rsvpCount = document.querySelector('#js-rsvpCount');
+                    rsvpCount.innerText = data.meta.total_count;
+                }
+
+                document.addEventListener("DOMContentLoaded", function() {
+                    addScript(meetupApi);
+                });
+            })();
+        </script>
+
     </body>
 </html>
