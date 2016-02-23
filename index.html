@@ -36,12 +36,16 @@
 
         <main>
             <section id="next-event" class="section--light">
-                <div class="container">
-                    <h2 class="muted">Next meetup</h2>
-
-                    <div class="Grid Grid--1of2 Grid--gutters">
-                        <article class="Grid-cell">
+                <div class="container--medium">
+                    <div class="Grid small-Grid--full med-Grid--1of2 Grid--gutters">
+                        <div class="Grid-cell">
+                            <h2 class="muted">Next meetup</h2>
                             <h3 class="alpha">MelbDjango 2.6 with a long title</h3>
+                        </div>
+                    </div>
+
+                    <div class="Grid small-Grid--full med-Grid--1of2 Grid--gutters">
+                        <article id="meetup-details" class="Grid-cell">
                             <time>Thursday September 11th 6:00pm</time>
 
                             <p><a href="" class="button--default">View on Meetup</a></p>
@@ -75,10 +79,10 @@
             </section>
 
             <section id="upcoming-speakers" class="section--mid">
-                <div class="container">
+                <div class="container--medium">
                     <h2 class="muted--inverse">Speaking at this meetup</h2>
 
-                    <div class="Grid Grid--1of2 Grid--gutters">
+                    <div class="Grid small-Grid--full med-Grid--1of2 Grid--gutters">
                         <article class="Grid-cell">
                             <header>
                                 <h3 class="beta">Talking Django</h3>
@@ -109,8 +113,8 @@
 
                         <article class="Grid-cell">
                             <header>
-                                <h3 class="beta">More cody code</h3>
-                                <time>8pm</time>
+                                <h3 class="beta">Talking Django</h3>
+                                <time>7pm</time>
                             </header>
                             <div>
                                 <p>A description of the talk. Mostly with Django. Stuff and stuff and stuff. Then we eat. then we drink.</p>
@@ -144,16 +148,20 @@
                                 <p>A description of the talk. Mostly with Django. Stuff and stuff and stuff. Then we eat. then we drink.</p>
                             </div>
                             <footer>
-                                <div>
-                                    <img src="">
-                                    <div>
-                                        <h4 class="beta">Brenton Cleeland</h4>
-                                        <p>
-                                            <a href="">@sesh</a>
-                                        </p>
-                                        <p>
-                                            <a href="">github/sesh</a>
-                                        </p>
+                                <div class="media">
+                                    <div class="media__figure">
+                                        <img src="http://lorempixel.com/100/100/" />
+                                    </div>
+                                    <div class="media__body">
+                                        <h4 class="media__body__heading">Brenton Cleeland</h4>
+                                        <ul class="media__body__links">
+                                            <li>
+                                                <a href="">@sesh</a>
+                                            </li>
+                                            <li>
+                                                <a href="">github/sesh</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </footer>
@@ -161,108 +169,143 @@
 
                         <article class="Grid-cell">
                             <header>
-                                <h3 class="beta">More cody code</h3>
-                                <time>8pm</time>
+                                <h3 class="beta">Talking Django</h3>
+                                <time>7pm</time>
                             </header>
                             <div>
                                 <p>A description of the talk. Mostly with Django. Stuff and stuff and stuff. Then we eat. then we drink.</p>
                             </div>
-                            <footer
-                                <div>
-                                    <img src="">
-                                    <div>
-                                        <h4 class="beta">Brenton Cleeland</h4>
-                                        <p>
-                                            <a href="">@sesh</a>
-                                        </p>
-                                        <p>
-                                            <a href="">github/sesh</a>
-                                        </p>
+                            <footer>
+                                <div class="media">
+                                    <div class="media__figure">
+                                        <img src="http://lorempixel.com/100/100/" />
+                                    </div>
+                                    <div class="media__body">
+                                        <h4 class="media__body__heading">Brenton Cleeland</h4>
+                                        <ul class="media__body__links">
+                                            <li>
+                                                <a href="">@sesh</a>
+                                            </li>
+                                            <li>
+                                                <a href="">github/sesh</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </footer>
                         </article>
+
                     </div>
                 </div>
             </section>
 
             <section id="get-involved" class="section--light">
-                <div class="container">
-                    <div class="Grid Grid--1of2 Grid--gutters">
-                        <article class="Grid-cell">
-                            <h3 class="beta">Interested in speaking at a future MelbDjango meetup?</h3>
-                            <p>Fork the site on Github, add yourself as a speaker, and put in a pull request.</p>
-                            <p>
-                                <a href="">Fork MelbDjango to apply</a>
-                            </p>
-                        </article>
-
-                        <article class="Grid-cell">
-                            <h3 class="beta">MelbDjango has it’s own Slack channel.</h3>
-                            <p>Sign up to take part in the discussion.</p>
-                            <div>
-                            </div>
-                        </article>
-                    </div>
+                <div class="container--narrow">
+                    <article>
+                        <h3 class="beta">Interested in speaking at a future MelbDjango meetup?</h3>
+                        <p>Fork the site on Github, add yourself as a speaker, and put in a pull request.</p>
+                        <p>
+                            <a href="https://github.com/melbdjango" class="button--default">
+                                Fork MelbDjango to apply
+                            </a>
+                        </p>
+                    </article>
                 </div>
             </section>
 
-            <section id="past-speakers" class="section--mid">
-                <div class="container">
-                    <h2 class="muted">Past MelbDjango speakers</h2>
-                    <div class="Grid Grid--1of2 Grid--gutters">
+            <section id="get-in-touch" class="section--mid">
+                <div class="container--narrow">
+                    <article>
+                        <h3 class="beta">MelbDjango has it’s own Slack channel.</h3>
+                        <p>Sign up to take part in the discussion.</p>
+                        <p>
+                            <a href="" class="button--default">Request an invite</a>
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="past-speakers" class="section--light">
+                <div class="container--medium">
+                    <h2 class="muted--inverse">Past MelbDjango speakers</h2>
+                    <div class="Grid small-Grid--full med-Grid--1of2 Grid--gutters">
 
                         <article class="Grid-cell">
-                            <img src="">
-                            <div>
-                                <h4 class="beta">Brenton Cleeland </h4>
-                                <p>
-                                    <a href="">@sesh</a>
-                                </p>
-                                <p>
-                                    <a href="">github/sesh</a>
-                                </p>
+                            <div class="media">
+                                <div class="media__figure">
+                                    <img src="http://lorempixel.com/100/100/" />
+                                </div>
+                                <div class="media__body">
+                                    <h4 class="media__body__heading">Brenton Cleeland</h4>
+                                    <ul class="media__body__links">
+                                        <li>
+                                            <a href="">@sesh</a>
+                                        </li>
+                                        <li>
+                                            <a href="">github/sesh</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </article>
 
                         <article class="Grid-cell">
-                            <img src="">
-                            <div>
-                                <h4 class="beta">Brenton Cleeland </h4>
-                                <p>
-                                    <a href="">@sesh</a>
-                                </p>
-                                <p>
-                                    <a href="">github/sesh</a>
-                                </p>
+                            <div class="media">
+                                <div class="media__figure">
+                                    <img src="http://lorempixel.com/100/100/" />
+                                </div>
+                                <div class="media__body">
+                                    <h4 class="media__body__heading">Brenton Cleeland</h4>
+                                    <ul class="media__body__links">
+                                        <li>
+                                            <a href="">@sesh</a>
+                                        </li>
+                                        <li>
+                                            <a href="">github/sesh</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </article>
 
                         <article class="Grid-cell">
-                            <img src="">
-                            <div>
-                                <h4 class="beta">Brenton Cleeland </h4>
-                                <p>
-                                    <a href="">@sesh</a>
-                                </p>
-                                <p>
-                                    <a href="">github/sesh</a>
-                                </p>
+                            <div class="media">
+                                <div class="media__figure">
+                                    <img src="http://lorempixel.com/100/100/" />
+                                </div>
+                                <div class="media__body">
+                                    <h4 class="media__body__heading">Brenton Cleeland</h4>
+                                    <ul class="media__body__links">
+                                        <li>
+                                            <a href="">@sesh</a>
+                                        </li>
+                                        <li>
+                                            <a href="">github/sesh</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </article>
 
                         <article class="Grid-cell">
-                            <img src="">
-                            <div>
-                                <h4 class="beta">Brenton Cleeland </h4>
-                                <p>
-                                    <a href="">@sesh</a>
-                                </p>
-                                <p>
-                                    <a href="">github/sesh</a>
-                                </p>
+                            <div class="media">
+                                <div class="media__figure">
+                                    <img src="http://lorempixel.com/100/100/" />
+                                </div>
+                                <div class="media__body">
+                                    <h4 class="media__body__heading">Brenton Cleeland</h4>
+                                    <ul class="media__body__links">
+                                        <li>
+                                            <a href="">@sesh</a>
+                                        </li>
+                                        <li>
+                                            <a href="">github/sesh</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </article>
+
                     </div>
                 </div>
             </section>

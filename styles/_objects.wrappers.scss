@@ -1,10 +1,28 @@
-.container {
-    // outline: 1px solid red;
-    margin: 0 $base-spacing-unit * 2;
 
+.container {
+    margin: 0 $default-margin;
 
     @media (min-width: $break-lg) {
         max-width: $desktop-width;
         margin: 0 auto;
+    }
+}
+
+.container--medium {
+    margin: 0 auto;
+    max-width: $narrow-width;
+
+    @media (min-width: $break-md) {
+        max-width: $medium-width;
+        margin: 0 auto;
+    }
+}
+
+.container--narrow {
+    margin: 0 $default-margin;
+
+    @media (min-width: $narrow-width + $default-margin) {
+        margin: 0 auto;
+        max-width: $narrow-width;
     }
 }

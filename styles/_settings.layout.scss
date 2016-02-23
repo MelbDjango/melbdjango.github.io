@@ -4,13 +4,16 @@
 $base-spacing-unit: 24px;
 
 $border-radius-base:  3px;
-$border-radius-large: 6px;
 
 
+// our containers use this default margin
+$default-margin: $base-spacing-unit * 2;
+
+$narrow-width: 360px;
+$medium-width: 640px;
 $desktop-width: 960px;
 
 // breakpoints
-
 $break-sm: 576px;
 $break-md: 768px;
-$break-lg: 1024px;
+$break-lg: $desktop-width + $default-margin;
