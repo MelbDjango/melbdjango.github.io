@@ -1,0 +1,358 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Melb Django</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="dist/styles.min.css">
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header id="hero" class="hero section--mid">
+            <div class="container--narrow">
+                <h1 class="brand">
+                    <img src="/assets/melbdjango-logo.svg" class="brand__logo" alt="MelbDjango logo">
+                </h1>
+
+                <p class="lead">
+                    A monthly Django meetup, hosted by
+                    <a href="https://twitter.com/commoncode">@commoncode</a>
+                    and organised by
+                    <a href="https://twitter.com/sesh">@sesh.</a>
+                </p>
+            </div>
+        </header>
+
+        <main>
+            <section id="next-event">
+                <div class="section--light">
+                    <div class="container--medium">
+                        <div class="Grid Grid--full med-Grid--1of2">
+                            <div class="Grid-cell">
+                                <h2 class="muted">Next meetup</h2>
+                                <h3 class="alpha">MelbDjango 2.8</h3>
+                            </div>
+                        </div>
+
+                        <div class="Grid Grid--full med-Grid--1of2 Grid--guttersLg">
+                            <article id="meetup-details" class="Grid-cell">
+                                <time>Thursday September 11th 6:00pm</time>
+
+                                <p>
+                                  Our March meetup will have talks from Jervis Whitley, Markus Holterman, and (maybe) Brenton Cleeland. If you're interested in adding your name to the list, shoot me an email: brenton@commoncode.com.au
+                                </p>
+                                <p>
+                                  Space and pizza provided by Common Code. Beer from SAMPLE.
+                                </p>
+                                <p>
+                                  More details to be announced closer to the event.
+                                </p>
+                            </article>
+
+                            <article id="sponsors" class="Grid-cell">
+                                <h2 class="muted">Space, pizza and drinks provided by</h2>
+                                <ul class="list--inline">
+                                    <li>
+                                        <img src="/assets/commoncode-logo.svg" class="sponsors__logo" alt="Common Code logo">
+                                    </li>
+                                    <li>
+                                        <img src="/assets/sample-logo.svg" class="sponsors__logo" alt="Sample Brewery logo">
+                                    </li>
+                                </ul>
+
+                                <p><span id="js-rsvpCount">Several</span> people have said they’re going.</p>
+
+                                <a href="http://www.meetup.com/MelbDjango/events/228887132/" class="button--default">View on Meetup.com</a>
+
+                                <p class="hard--bottom">Hosted by Common Code at Common Space</p>
+
+                                <address class="hard-ends">
+                                   <a href="https://www.google.com.au/maps/place/10+Studley+St,+Abbotsford+VIC+3067/@-37.801098,144.991335,17z/data=!3m1!4b1!4m2!3m1!1s0x6ad6431cc58bed27:0x8c6b70e3017d6060">
+                                       <span>8-10 Studley Street,</span><br>
+                                       <span>Abbotsford, Melbourne</span>
+                                   </a>
+                                </address>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section--light">
+                    <div class="container--medium">
+                        <h2 class="muted">Speaking at this meetup</h2>
+
+                        <div class="Grid Grid--full med-Grid--1of2 Grid--guttersLg">
+
+                            <!-- speaking article begins -->
+                            <article class="speaking Grid-cell">
+                                <header>
+                                    <h3 class="speaking__topic beta">Russian Doll Caching</h3>
+                                    <time class="speaking__time">7pm</time>
+                                </header>
+                                <div class="speaking__body">
+                                    <!-- add as many paragraphs in here as you need! -->
+                                    <p>Exploring the pros and cons of key-based caching techniques for your Django project.</p>
+                                </div>
+                                <footer>
+                                    <div class="media">
+                                        <div class="media__figure">
+                                            <img src="https://media.licdn.com/media/p/4/000/173/263/2b41ae5.jpg" alt="Speaker avatar"/>
+                                        </div>
+                                        <div class="media__body">
+                                            <!-- Your name -->
+                                            <h4 class="media__body__heading">Jervis Whitley</h4>
+                                            <ul class="media__body__links">
+                                                <!-- Please add one to three links in the format below -->
+                                                <li><a href="http://whit.com.au">whit.com.au</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </footer>
+                            </article>
+                            <!-- speaking article ends -->
+
+                            <!-- speaking article begins -->
+                            <article class="speaking Grid-cell">
+                                <header>
+                                    <h3 class="speaking__topic beta">Poor man's DevOps strategies using Fabric</h3>
+                                    <time class="speaking__time">7:30pm</time>
+                                </header>
+                                <div class="speaking__body">
+                                    <!-- add as many paragraphs in here as you need! -->
+                                    <p>Stop repeating yourself and start deploying small to mid-sized Django projects with Fabric.</p>
+                                </div>
+                                <footer>
+                                    <div class="media">
+                                        <div class="media__figure">
+                                            <img src="https://lh3.googleusercontent.com/-5UUDvn4c9Tg/UQAMW0480OI/AAAAAAAAA3M/7n5J8BUPEeU/s790-no/IMG_3863.JPG" alt="Speaker avatar"/>
+                                        </div>
+                                        <div class="media__body">
+                                            <!-- Your name -->
+                                            <h4 class="media__body__heading">Alaa Salman</h4>
+                                            <ul class="media__body__links">
+                                                <!-- Please add one to three links in the format below -->
+                                                <li><a href="https://github.com/alaasalman">github.com/alaasalman</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </footer>
+                            </article>
+                            <!-- speaking article ends -->
+
+                            <!-- speaking article begins -->
+                            <article class="speaking Grid-cell">
+                                <header>
+                                    <h3 class="speaking__topic beta">Don't be afraid of writing migrations</h3>
+                                    <time class="speaking__time">8pm</time>
+                                </header>
+                                <div class="speaking__body">
+                                    <p>Markus will point out some of the common cases where you should get your hands dirty, and show you how writing migrations is easier than you think.</p>
+                                </div>
+                                <div class="media">
+                                    <div class="media__figure">
+                                        <img src="https://avatars1.githubusercontent.com/u/475613?v=3&s=400" alt="Speaker avatar"/>
+                                    </div>
+                                    <div class="media__body">
+                                        <!-- Your name -->
+                                        <h4 class="media__body__heading">Markus Holterman</h4>
+                                        <ul class="media__body__links">
+                                            <!-- Please add one to three links in the format below -->
+                                            <li><a href="https://github.com/markush">github.com/markush</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </article>
+                            <!-- speaking article ends -->
+
+                            <!-- speaking article begins -->
+                            <article class="speaking Grid-cell">
+                                <header>
+                                    <h3 class="speaking__topic beta">This Month in Django</h3>
+                                    <time class="speaking__time">8:45pm</time>
+                                </header>
+                                <div class="speaking__body">
+                                    <p>
+                                      This Month in Django is our montly summary of all the things happening in the Django and Python worlds.
+                                      Normally this entails a rundown of popular topics from the Django mailing list, interesting packages Brenton found on Github, and details of updates to any popular Django packages.
+                                    </p>
+                                </div>
+                                <footer>
+                                  <footer>
+                                      <p>Keen to present this one? Make a Pull Request or email <a href="mailto:brenton@commoncode.com.au">Brenton</a> to sign up!</p>
+                                  </footer>
+
+                                </footer>
+                            </article>
+                            <!-- speaking article ends -->
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="get-involved" class="section--mid">
+                <div class="container--narrow">
+                    <article>
+                        <h3 class="beta">Interested in speaking at a future MelbDjango meetup?</h3>
+                        <p>
+                          Fork the site on Github, add yourself as a speaker, and put in a pull request<br>
+                        </p>
+                        <a href="https://github.com/melbdjango/melbdjango.github.io" class="button--default">
+                            Fork MelbDjango to apply
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section id="get-in-touch" class="section--light">
+                <div class="container--narrow">
+                    <article>
+                        <h3 class="beta">MelbDjango has it’s own Slack channel.</h3>
+                        <p>Sign up to take part in the discussion.</p>
+                        <a href="#" class="button--default">Request an invite</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- <section id="past-speakers" class="section--mid">
+                <div class="container--medium">
+                    <h2 class="muted">Past MelbDjango speakers</h2>
+
+                    <div class="Grid Grid--full med-Grid--1of2 Grid--guttersLg">
+
+                        <article class="past-speaker Grid-cell">
+                            <div class="media">
+                                <div class="media__figure">
+                                    <img src="http://lorempixel.com/100/100/" />
+                                </div>
+                                <div class="media__body">
+                                    <h4 class="media__body__heading">Brenton Cleeland</h4>
+                                    <ul class="media__body__links">
+                                        <li><a href="#">@sesh</a></li>
+                                        <li><a href="#">github/sesh</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="past-speaker Grid-cell">
+                            <div class="media">
+                                <div class="media__figure">
+                                    <img src="http://lorempixel.com/100/100/" />
+                                </div>
+                                <div class="media__body">
+                                    <h4 class="media__body__heading">Brenton Cleeland</h4>
+                                    <ul class="media__body__links">
+                                        <li><a href="#">@sesh</a></li>
+                                        <li><a href="#">github/sesh</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="past-speaker Grid-cell">
+                            <div class="media">
+                                <div class="media__figure">
+                                    <img src="http://lorempixel.com/100/100/" />
+                                </div>
+                                <div class="media__body">
+                                    <h4 class="media__body__heading">Brenton Cleeland</h4>
+                                    <ul class="media__body__links">
+                                        <li><a href="#">@sesh</a></li>
+                                        <li><a href="#">github/sesh</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="past-speaker Grid-cell">
+                            <div class="media">
+                                <div class="media__figure">
+                                    <img src="http://lorempixel.com/100/100/" />
+                                </div>
+                                <div class="media__body">
+                                    <h4 class="media__body__heading">Brenton Cleeland</h4>
+                                    <ul class="media__body__links">
+                                        <li><a href="#">@sesh</a></li>
+                                        <li><a href="#">github/sesh</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section> -->
+        </main>
+
+        <footer id="footer" class="section--dark">
+            <div class="container">
+                <p>
+                    <span class="muted--inverse">MelbDjango</span><br>
+                    <a href="https://twitter.com/melbdjango">@MelbDjango</a><br>
+                    <a href="https://github.com/melbdjango">github.com/melbdjango</a><br>
+                </p>
+                <p>
+                    <a href="/code_of_conduct.html">Read the code of conduct</a>
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create',' UA-42389796-1','auto');ga('send','pageview');
+        </script>
+
+        <script>
+            (function () {
+                'use strict';
+
+                // change this each event to get the appropriate RSVPs
+                var eventId = 228887132;
+
+                var meetupApi = [
+                    'https://api.common.io/meetups/',
+                    eventId,
+                    '/rsvps/',
+                    '?callback=apiCallback'
+                ].join('');
+
+                // http://stackoverflow.com/questions/28364649/access-json-data-from-external-javascript
+                function addScript(src) {
+                    var s = document.createElement( 'script' );
+                    s.setAttribute( 'src', src );
+                    document.body.appendChild( s );
+                }
+
+                // Callback for loading api data:
+                window.apiCallback = function(data) {
+                    // console.info(data);
+                    var rsvpCount = document.querySelector('#js-rsvpCount');
+                    rsvpCount.innerText = data.rsvp_yes;
+                }
+
+                document.addEventListener("DOMContentLoaded", function() {
+                    addScript(meetupApi);
+                    document.documentElement.classList.remove('no-js');
+                    document.documentElement.classList.add('js');
+                });
+            })();
+        </script>
+
+    </body>
+</html>

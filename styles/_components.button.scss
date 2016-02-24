@@ -1,0 +1,38 @@
+
+%button {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 $base-spacing-unit;
+    padding: $base-spacing-unit / 2 $base-spacing-unit * 2;
+    border-radius: $border-radius-base;
+    box-shadow: 2px 2px 2px 0 rgba(12, 75, 51, 0.2);
+
+    // counter styles on <a>
+    color: $text-primary;
+    text-decoration: none;
+    text-shadow: none;
+
+    &:link {}
+    &:visited {
+        color: $text-primary;
+    }
+    &:hover {
+        top: 1px;
+    }
+    &:focus {}
+    &:active {}
+
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+.button--default {
+    @extend %button;
+    background-color: $ice;
+    color: $dark-sea-green;
+
+    &:visited {
+        color: $dark-sea-green;
+    }
+}

@@ -1,0 +1,19 @@
+
+// this is the default margin spacing, gutter width, etc
+// most measurements should be a fraction or multiple of this, eg 1/2, 2x, etc
+$base-spacing-unit: 24px;
+
+$border-radius-base:  3px;
+
+
+// our containers use this default margin
+$default-margin: $base-spacing-unit * 2;
+
+$narrow-width: 444px;
+$medium-width: 760px;
+$desktop-width: 960px;
+
+// breakpoints
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: $desktop-width + $default-margin;

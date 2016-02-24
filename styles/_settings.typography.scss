@@ -1,0 +1,17 @@
+
+
+// Traditional Garamond-based serif stack
+// https://css-tricks.com/snippets/css/font-stacks/
+$font-family-serif: 'Palatino Linotype', Palatino, Palladio, 'URW Palladio L', 'Book Antiqua', Baskerville, 'Bookman Old Style', 'Bitstream Charter', 'Nimbus Roman No9 L', Garamond, 'Apple Garamond', 'ITC Garamond Narrow', 'New Century Schoolbook', 'Century Schoolbook', 'Century Schoolbook L', Georgia, serif;
+
+// https://www.google.com/fonts#UsePlace:use/Collection:Roboto
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+$font-family-sans-serif: 'Roboto', sans-serif;
+
+$alpha-size: 36px;
+$beta-size:  24px;
+$gamma-size: 18px;
+
+$font-size-base: $gamma-size;
+
+$font-weight-base: 400;

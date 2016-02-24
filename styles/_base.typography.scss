@@ -1,0 +1,61 @@
+
+
+// set all heading sizes to an unstyled neutral to completely separate style and semantics
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 $base-spacing-unit;
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+}
+
+// heading classes
+.alpha {
+    font-family: $font-family-sans-serif;
+    font-size: $alpha-size;
+    color: $white;
+    text-shadow: 2px 2px 2px rgba(12, 75, 51, 0.2);
+}
+
+.beta {
+    font-family: $font-family-sans-serif;
+    font-size: $beta-size;
+    color: $white;
+}
+
+.gamma {
+    font-family: $font-family-sans-serif;
+    font-size: $gamma-size;
+    color: $white;
+}
+
+p {
+    margin: $base-spacing-unit 0;
+}
+
+.lead {
+    color: $white;
+}
+
+.muted {
+    color: $dark-sea-green;
+}
+.muted--inverse {
+    color: $light-sage;
+}
+
+a {
+    color: $white;
+    text-decoration: underline;
+    text-shadow: 2px 2px 2px rgba(12, 75, 51, 0.2);
+
+    &:link {}
+    &:visited {
+        color: $light-sage;
+    }
+    &:hover {}
+    &:focus {}
+    &:active {}
+}
+
+address {
+    font-style: normal;
+}

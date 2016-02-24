@@ -1,0 +1,43 @@
+{
+  "name": "melbdjango.github.io",
+  "version": "1.0.0",
+  "description": "Static page for Melb Django, to be hosted on gh-pages",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "postcss": "node_modules/.bin/postcss",
+    "nodemon": "node_modules/.bin/nodemon",
+    "build": "node-sass --source-map true styles/styles.scss .tmp/styles-raw.css & npm run autoprefixer -s",
+    "autoprefixer": "postcss --use autoprefixer -o .tmp/styles-prefixed.css .tmp/styles-raw.css -m .tmp/styles-raw.css.map & npm run cleancss -s",
+    "cleancss": "cleancss --source-map -o dist/styles.min.css .tmp/styles-prefixed.css",
+    "serve": "browser-sync start --server --files \"*.html\" --files \"dist/*\"",
+    "start": "parallelshell 'nodemon --exec \"npm run build\" --watch styles --ext css,scss' 'npm run serve'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelbDjango/melbdjango.github.io.git"
+  },
+  "keywords": [
+    "django",
+    "commoncode",
+    "common-code"
+  ],
+  "author": "Darren Frenkel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MelbDjango/melbdjango.github.io/issues"
+  },
+  "homepage": "https://github.com/MelbDjango/melbdjango.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "browser-sync": "^2.11.1",
+    "clean-css": "^3.4.9",
+    "node-sass": "^3.4.2",
+    "nodemon": "1.3.x",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.5.1"
+  }
+}
