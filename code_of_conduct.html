@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Melb Django</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="dist/styles.min.css">
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header id="hero" class="hero section--mid">
+            <div class="container--narrow">
+                <h1 class="brand">
+                    <img src="/assets/melbdjango-logo.svg" class="brand__logo" alt="MelbDjango logo">
+                </h1>
+
+                <p class="lead">
+                    A monthly Django meetup, hosted by
+                    <a href="https://twitter.com/commoncode">@commoncode</a>
+                    and organised by
+                    <a href="https://twitter.com/sesh">@sesh.</a>
+                </p>
+            </div>
+        </header>
+
+        <main>
+            <section id="code-of-conduct">
+                <div class="section--light">
+                  <div class="container--medium">
+                    <div class="Grid Grid--full">
+                      <div class="Grid-cell">
+
+                        <h2 class="alpha">MelbDjango's Code of Conduct</h2>
+
+                        <p>
+              						MelbDjango aims to provide a friendly environment for all attendees and speakers, to do this we need
+                          the help of all participants at our events.
+              					</p>
+              					<p>
+              						MelbDjango is dedicated to providing a great experience for everyone. We will not tolerate harrasment
+                          or abuse of any kind by event participants.
+              					</p>
+              					<p>
+              						Be kind to others. Behave professionally. Make new friends and engage in interesting conversations
+                          with people. Remember that harassment and sexist, racist, or exclusionary comments are not appropriate
+                          at MelbDjango events.
+              					</p>
+              					<p>
+              						Be approriate to the situation. MelbDjango has a professional audience including people of many
+                          different backgrounds. Please keep this in mind when preparing talks and taking part in discussions
+                          during the event.
+              					</p>
+              					<p>
+              						Talk to us. Let us know if you encounter harassment or otherwise feel uncomfortable at any time
+                          during our events.
+              					</p>
+              					<p>
+              						Thanks! Thank you for helping make our events a welcoming, friendly experience for all.
+              					</p>
+
+                        <p>
+                          <strong>Brenton Cleeland</strong> - brenton@commoncode.com.au<br>
+                          <strong>Daryl Antony</strong> - daryl@commoncode.com.au<br>
+                          <strong>Bonnie Abbott</strong> - bonnie@commoncode.com.au
+                        </p>
+
+                  </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer" class="section--dark hard--bottom">
+            <div class="container">
+                <p>
+                    <span class="muted--inverse">MelbDjango</span><br>
+                    <a href="https://twitter.com/melbdjango">@MelbDjango</a><br>
+                    <a href="https://github.com/melbdjango">github.com/melbdjango</a><br>
+                </p>
+                <p>
+                    <a href="#code-of-conduct">Read the code of conduct</a>
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create',' UA-42389796-1','auto');ga('send','pageview');
+        </script>
+
+        <script>
+            (function () {
+                'use strict';
+
+                // change this each event to get the appropriate RSVPs
+                var eventId = 228887132;
+
+                var meetupApi = [
+                    'https://api.common.io/meetups/',
+                    eventId,
+                    '/rsvps/',
+                    '?callback=apiCallback'
+                ].join('');
+
+                // http://stackoverflow.com/questions/28364649/access-json-data-from-external-javascript
+                function addScript(src) {
+                    var s = document.createElement( 'script' );
+                    s.setAttribute( 'src', src );
+                    document.body.appendChild( s );
+                }
+
+                // Callback for loading api data:
+                window.apiCallback = function(data) {
+                    // console.info(data);
+                    var rsvpCount = document.querySelector('#js-rsvpCount');
+                    rsvpCount.innerText = data.rsvp_yes;
+                }
+
+                document.addEventListener("DOMContentLoaded", function() {
+                    addScript(meetupApi);
+                    document.documentElement.classList.remove('no-js');
+                    document.documentElement.classList.add('js');
+                });
+            })();
+        </script>
+
+    </body>
+</html>
