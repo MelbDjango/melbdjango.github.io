@@ -225,28 +225,13 @@
                 </div>
             </section>
 
-            <!-- <section id="past-speakers" class="section--mid">
+            <section class="section--mid">
                 <div class="container--medium">
                     <h2 class="muted">Past MelbDjango speakers</h2>
 
-                    <div class="Grid Grid--full med-Grid--1of2 Grid--guttersLg">
-                        <article class="past-speaker Grid-cell">
-                            <div class="media">
-                                <div class="media__figure">
-                                    <img src="http://lorempixel.com/100/100/" />
-                                </div>
-                                <div class="media__body">
-                                    <h4 class="media__body__heading">Brenton Cleeland</h4>
-                                    <ul class="media__body__links">
-                                        <li><a href="#">@sesh</a></li>
-                                        <li><a href="#">github/sesh</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                    <div class="Grid Grid--full med-Grid--1of2 Grid--guttersLg" id="past-speakers"></div>
                 </div>
-            </section> -->
+            </section>
         </main>
 
         <footer id="footer" class="section--dark">
@@ -271,12 +256,36 @@
             ga('create',' UA-42389796-1','auto');ga('send','pageview');
         </script>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js" charset="utf-8"></script>
+
+
+        <script id="speaker-template" type="text/x-handlebars-template">
+          {{#each speakers}}
+          <article class="past-speaker Grid-cell">
+              <div class="media">
+                  <div class="media__figure">
+                      <img src="{{photo}}" />
+                  </div>
+                  <div class="media__body">
+                      <h4 class="media__body__heading">{{name}}</h4>
+                      <ul class="media__body__links">
+                          {{#if twitter}}<li><a href="https://twitter.com/{{twitter}}">@{{twitter}}</a></li>{{/if}}
+                          {{#if github}}<li><a href="https://github.com/{{github}}">github.com/{{github}}</a></li>{{/if}}
+                      </ul>
+                  </div>
+              </div>
+          </article>
+          {{/each}}
+        </script>
+
         <script>
             (function () {
                 'use strict';
 
                 // change this each event to get the appropriate RSVPs
                 var eventId = 228887132;
+                var meetupSlug = 'melbdjango';
 
                 var meetupApi = [
                     'https://api.common.io/meetups/',
@@ -287,14 +296,13 @@
 
                 // http://stackoverflow.com/questions/28364649/access-json-data-from-external-javascript
                 function addScript(src) {
-                    var s = document.createElement( 'script' );
-                    s.setAttribute( 'src', src );
-                    document.body.appendChild( s );
+                    var s = document.createElement('script');
+                    s.setAttribute('src', src);
+                    document.body.appendChild(s);
                 }
 
                 // Callback for loading api data:
                 window.apiCallback = function(data) {
-                    // console.info(data);
                     var rsvpCount = document.querySelector('#js-rsvpCount');
                     rsvpCount.innerText = data.rsvp_yes;
                 }
@@ -304,6 +312,13 @@
                     document.documentElement.classList.remove('no-js');
                     document.documentElement.classList.add('js');
                 });
+
+                $.get('https://api.common.io/meetups/' + meetupSlug + '/', function(data) {
+                  var source = $('#speaker-template').html();
+                  var template = Handlebars.compile(source);
+                  var html = template(data);
+                  $('#past-speakers').html(html);
+                })
             })();
         </script>
 
